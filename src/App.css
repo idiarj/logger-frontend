@@ -13,19 +13,17 @@ body {
   padding-top: 2rem;
 }
 
-/* 3. Título en color turquesa */
 .app-title {
-  color: #0097b2; /* Ajusta este color al que más se parezca a tu mockup */
+  color: #0097b2; 
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-/* 4. Contenedor turquesa con bordes muy redondeados */
 .teal-container {
-  background-color: #0097b2; /* Ajusta el tono de turquesa al que desees */
-  width: 700px;              /* Aumenta el ancho para que sea "grande" */
-  border-radius: 40px;       /* Bordes más curvos */
+  background-color: #0097b2; 
+  width: 700px;      
+  border-radius: 40px;     
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -33,7 +31,6 @@ body {
   align-items: center;
 }
 
-/* 5. Envoltura para el buscador y el botón */
 .search-wrapper {
   display: flex;
   align-items: center;
@@ -42,18 +39,16 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* 6. Barra de búsqueda blanca (más ancha) */
 .search-bar {
   flex: 1;
   display: flex;
   align-items: center;
   background-color: #fff;
-  border-radius: 40px; /* Bordes redondeados */
+  border-radius: 40px; 
   padding: 0.5rem 1rem;
   position: relative;
 }
 
-/* 7. Input en la barra de búsqueda */
 .search-input {
   flex: 1;
   border: none;
@@ -63,13 +58,11 @@ body {
   color: #333;
 }
 
-/* 8. Ícono de búsqueda (lupa) */
 .search-icon {
   color: #0097b2;
   margin-left: 0.5rem;
 }
 
-/* 9. Botón circular blanco con flecha */
 .dropdown-button {
   background-color: #fff;
   color: #0097b2;
@@ -87,7 +80,6 @@ body {
   background-color: #f0f0f0;
 }
 
-/* 10. Contenedor de los logs */
 .logs-container {
   display: flex;
   flex-direction: column;
@@ -95,7 +87,6 @@ body {
   gap: 1rem;
 }
 
-/* 11. Botones de log blancos con texto oscuro */
 .log-button {
   background-color: #fff;
   color: #0097b2;
