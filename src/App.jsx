@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import { FaChevronDown, FaChevronUp, FaSearch } from "react-icons/fa";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleToggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app-container">
+      {/* Título principal */}
+      <h1 className="app-title">logger by idiar y vic</h1>
+
+      {/* Contenedor turquesa principal */}
+      <div className="teal-container">
+        <div className="search-wrapper">
+          {/* Barra de búsqueda blanca */}
+          <div className="search-bar">
+            <input
+              className="search-input"
+              type="text"
+              placeholder="Buscar logs..."
+            />
+            {/* Icono de lupa a la derecha dentro de la barra */}
+            <FaSearch className="search-icon" />
+          </div>
+
+          {/* Botón circular blanco con flecha */}
+          <button className="dropdown-button" onClick={handleToggleDropdown}>
+            {isDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
+          </button>
+        </div>
+
+        {/* Logs que se despliegan */}
+        {isDropdownOpen && (
+          <div className="logs-container">
+            <button className="log-button">log 1</button>
+            <button className="log-button">log 2</button>
+          </div>
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
