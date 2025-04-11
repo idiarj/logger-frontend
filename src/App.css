@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff; 
+  background-color: #7a8286; 
   font-family: sans-serif;
 }
 
@@ -14,14 +14,14 @@ body {
 }
 
 .app-title {
-  color: #0097b2; 
+  color: #333; 
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
 .teal-container {
-  background-color: #0097b2; 
+  background-color: #333; 
   max-width: 900px;      
   width: 100%;
   border-radius: 40px;     
@@ -60,13 +60,13 @@ body {
 }
 
 .search-icon {
-  color: #0097b2;
+  color: #333;
   margin-left: 0.5rem;
 }
 
 .dropdown-button {
   background-color: #fff;
-  color: #0097b2;
+  color: #333;
   border: none;
   border-radius: 50%;
   width: 44px;
