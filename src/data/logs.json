@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "message": "Solicitud recibida",
+      "type": "get",
+      "timestamp": "2025-04-10T10:15:30Z",
+      "cpu": 12,
+      "memory": 256
+    },
+    {
+      "id": 2,
+      "message": "Recurso creado correctamente",
+      "type": "post",
+      "timestamp": "2025-04-10T10:16:05Z",
+      "cpu": 18,
+      "memory": 300
+    },
+    {
+      "id": 3,
+      "message": "Actualización completada",
+      "type": "put",
+      "timestamp": "2025-04-10T10:17:20Z",
+      "cpu": 15,
+      "memory": 280
+    },
+    {
+      "id": 4,
+      "message": "Eliminación de recurso ejecutada",
+      "type": "delete",
+      "timestamp": "2025-04-10T10:18:45Z",
+      "cpu": 20,
+      "memory": 350
+    },
+    {
+      "id": 5,
+      "message": "Parche aplicado correctamente",
+      "type": "patch",
+      "timestamp": "2025-04-10T10:20:00Z",
+      "cpu": 10,
+      "memory": 240
+    },
+    {
+      "id": 6,
+      "message": "Error al procesar la solicitud",
+      "type": "error",
+      "timestamp": "2025-04-10T10:22:00Z",
+      "cpu": 25,
+      "memory": 400
+    },
+    {
+      "id": 7,
+      "message": "Advertencia: uso elevado de memoria",
+      "type": "warning",
+      "timestamp": "2025-04-10T10:23:30Z",
+      "cpu": 22,
+      "memory": 450
+    },
+    {
+      "id": 8,
+      "message": "Información: proceso completado",
+      "type": "info",
+      "timestamp": "2025-04-10T10:24:45Z",
+      "cpu": 12,
+      "memory": 320
+    },
+    {
+      "id": 9,
+      "message": "Depuración: variable X tiene valor inesperado",
+      "type": "debug",
+      "timestamp": "2025-04-10T10:25:55Z",
+      "cpu": 8,
+      "memory": 200
+    }
+  ]
+  

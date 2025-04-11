@@ -1,12 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronDown, FaChevronUp, FaSearch } from "react-icons/fa";
 import "./App.css";
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [logs, setLogs] = useState([]);
 
   const handleToggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  useEffect(() => {
+    const fetchLogs = async () => {
+      const response = await import("./data/logs.json");
+      setLogs(response.default);
+    };
+    fetchLogs();
+  }, []);
+
+  const typeColors = {
+    error: "red",
+    warning: "orange",
+    info: "green",
+    debug: "gray",
+    post: "#4CAF50",
+    put: "#2196F3",
+    delete: "#f44336",
+    get: "#009688",
+    patch: "#9C27B0"
   };
 
   return (
@@ -23,7 +44,6 @@ function App() {
             />
             <FaSearch className="search-icon" />
           </div>
-
           <button className="dropdown-button" onClick={handleToggleDropdown}>
             {isDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
           </button>
@@ -31,8 +51,24 @@ function App() {
 
         {isDropdownOpen && (
           <div className="logs-container">
-            <button className="log-button">log 1</button>
-            <button className="log-button">log 2</button>
+            {logs.map((log) => {
+              const color = typeColors[log.type] || "#0097b2";
+              return (
+                <div className="log-item" key={log.id}>
+                  <span className="log-message" style={{ color }}>
+                    [{new Date(log.timestamp).toLocaleString()}] {log.message} 
+                    - CPU: {log.cpu}% - Mem: {log.memory}MB
+                  </span>
+                  <span className="log-type" style={{ color }}>
+                    {log.type.toUpperCase()}
+                    <span
+                      className="type-circle"
+                      style={{ backgroundColor: color }}
+                    />
+                  </span>
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
